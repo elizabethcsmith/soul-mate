@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/javascripts/eventlisteners.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.js"></script>
+  </head>
+  <body>
+<div class="card">
+    <div class="ui segment">
+      <div class="ui centered">
+        <h2>Introducing the love of your life,<br>
+           <%= person.name %></h2>
+        <div class="ui card">
+          <div class="image">
+            <img src="<%= person.avatar %>">
+          </div>
+          <div class="content">
+            <a class="header"><%= person.name %></a>
+            <div class="meta">
+              <span class="date">Joined in <%= person.createdAt %></span>
+            </div>
+            <div class="content description"> <br>
+              <%= person.name %> is a <%= person.job %> living in <%= person.address.city %>.
+              <div class="pickupLine">
+              <h4>Favorite pick up line is :</h4>
+              <p>"<%= person.pickUpLine %>".</p>
+              </div>
+            </div>
+          </div>
+          <div class="extra content">
+            <a>
+              <i class="content user icon"></i>
+              <%= person.friends %> Ex-lovers
+            </a>
+          </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+    <button id="accept" class="ui positive basic button">Hell Yeah</button>
+    <button id="reject" class="ui negative basic button">Ew Gross</button>
+  </body>
+</html>
